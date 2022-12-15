@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+button:focus {
+  box-shadow: none !important;
+}
+
 /* Loader */
 .lds-ellipsis {
   position: relative;
@@ -75,6 +79,13 @@
 .choose-item-category:hover {
   background-color: rgb(244, 244, 244);
 }
+
+/* Hover color item in navbar client */
+.nav-link:hover {
+  color: #39b0e5;
+}
+
+
 
 /* Responsive Appear */
 @media only screen and (max-width: 1200px) {

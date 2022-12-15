@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import { Button, Collapse, Dropdown, ListGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Button, Collapse, ListGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Container from 'react-bootstrap/esm/Container'
 
 const NavbarClient = () => {
     const [open, setOpen] = useState(false);
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar style={{ borderBottom: 'solid 1px #dddddd' }} expand="lg" className='py-0'>
             <Container>
                 <Navbar.Brand>
                     <Button
                         className='d-flex justify-content-between align-items-center'
                         onClick={() => setOpen(!open)}
                         aria-expanded={open}
-                        style={{ background: '#39b0e5', border: 'none', width: '250px', borderRadius: '0px' }}
+                        style={{ background: '#39b0e5', border: 'none', width: '250px', outlineOffset: 'none', borderRadius: '0px' }}
                     >
                         <i className="fas fa-list me-2"></i>
                         Danh mục sản phẩm
@@ -38,9 +38,12 @@ const NavbarClient = () => {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Trang chủ</Nav.Link>
-                        <Nav.Link href="#link">Sản phẩm</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        <Nav.Link className='nav-link me-4' href="/">Trang chủ</Nav.Link>
+                        <Nav.Link className='nav-link me-4' href="/product">Sản phẩm</Nav.Link>
+                        <Nav.Link className='nav-link me-4' href="/blog">Bài viết</Nav.Link>
+                        <Nav.Link className='nav-link me-4' href="/introduce">Giới thiệu</Nav.Link>
+                        <Nav.Link className='nav-link me-4' href="/contact">Liên hệ</Nav.Link>
+                        {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">
                                 Another action
@@ -50,7 +53,7 @@ const NavbarClient = () => {
                             <NavDropdown.Item href="#action/3.4">
                                 Separated link
                             </NavDropdown.Item>
-                        </NavDropdown>
+                        </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>
