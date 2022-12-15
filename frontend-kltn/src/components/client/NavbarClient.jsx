@@ -1,21 +1,31 @@
-import React from 'react'
-import { Dropdown, DropdownButton, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Button, Collapse, Dropdown, ListGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Container from 'react-bootstrap/esm/Container'
 
 const NavbarClient = () => {
+    const [open, setOpen] = useState(false);
     return (
         <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand>
-                    <DropdownButton id="dropdown-basic-button" title="Danh mục sản phẩm">
-                        <Dropdown.Item style={{width: '100%'}} href="#/action-1">Action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                    </DropdownButton>
+                    <Button
+                        onClick={() => setOpen(!open)}
+                        aria-expanded={open}
+                        style={{ background: '#39b0e5', border: 'none', outline: 'none' }}
+                    >
+                        <i className="fas fa-list me-2"></i>
+                        Danh mục sản phẩm
+                        <i style={{marginLeft: '15px'}} className="fas fa-caret-down"></i>
+                    </Button>
+                    <Collapse in={open}>
+                        <ListGroup style={{ position: 'absolute' }}>
+                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
+                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                        </ListGroup>
+                    </Collapse>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
