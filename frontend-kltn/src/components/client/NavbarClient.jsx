@@ -9,21 +9,29 @@ const NavbarClient = () => {
             <Container>
                 <Navbar.Brand>
                     <Button
+                        className='d-flex justify-content-between align-items-center'
                         onClick={() => setOpen(!open)}
                         aria-expanded={open}
-                        style={{ background: '#39b0e5', border: 'none', outline: 'none' }}
+                        style={{ background: '#39b0e5', border: 'none', width: '250px', borderRadius: '0px' }}
                     >
                         <i className="fas fa-list me-2"></i>
                         Danh mục sản phẩm
-                        <i style={{marginLeft: '15px'}} className="fas fa-caret-down"></i>
+                        <i style={{ marginLeft: '15px' }} className="fas fa-caret-down"></i>
                     </Button>
                     <Collapse in={open}>
-                        <ListGroup style={{ position: 'absolute' }}>
-                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
-                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
-                            <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
-                            <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                        <ListGroup style={{ position: 'absolute', width: '250px', borderRadius: '0px' }}>
+                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
+                            </ListGroup.Item>
+                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo thun
+                            </ListGroup.Item>
+                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Giày thể thao
+                            </ListGroup.Item>
+                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Quần tây
+                            </ListGroup.Item>
                         </ListGroup>
                     </Collapse>
                 </Navbar.Brand>

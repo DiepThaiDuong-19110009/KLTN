@@ -71,6 +71,11 @@
   }
 }
 
+/* choose-item-category */
+.choose-item-category:hover {
+  background-color: rgb(244, 244, 244);
+}
+
 /* Responsive Appear */
 @media only screen and (max-width: 1200px) {
   .responsive-appear-max {
