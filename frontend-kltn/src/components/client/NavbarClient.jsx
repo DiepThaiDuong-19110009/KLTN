@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Collapse, ListGroup, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Button, Collapse, ListGroup, Nav, Navbar } from 'react-bootstrap'
 import Container from 'react-bootstrap/esm/Container'
 
 const NavbarClient = () => {
@@ -7,12 +7,12 @@ const NavbarClient = () => {
     return (
         <Navbar style={{ borderBottom: 'solid 1px #dddddd' }} expand="lg" className='py-0'>
             <Container>
-                <Navbar.Brand>
+                <Navbar.Brand className='my-0 py-0' style={{textTransform: 'uppercase'}}>
                     <Button
-                        className='d-flex justify-content-between align-items-center'
+                        className='d-flex justify-content-between align-items-center py-2 my-0'
                         onClick={() => setOpen(!open)}
                         aria-expanded={open}
-                        style={{ background: '#39b0e5', border: 'none', width: '250px', outlineOffset: 'none', borderRadius: '0px' }}
+                        style={{ background: '#39b0e5', border: 'none', width: '250px', outlineOffset: 'none', borderRadius: '0px', textTransform: 'uppercase' }}
                     >
                         <i className="fas fa-list me-2"></i>
                         Danh mục sản phẩm
@@ -37,7 +37,7 @@ const NavbarClient = () => {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="me-auto" style={{textTransform: 'uppercase'}}>
                         <Nav.Link className='nav-link me-4' href="/">Trang chủ</Nav.Link>
                         <Nav.Link className='nav-link me-4' href="/product">Sản phẩm</Nav.Link>
                         <Nav.Link className='nav-link me-4' href="/blog">Bài viết</Nav.Link>
