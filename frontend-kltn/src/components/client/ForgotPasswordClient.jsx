@@ -41,7 +41,7 @@ const ForgotPasswordClient = () => {
                         </Form.Group>
                         <Form.Group className='d-flex justify-content-center'>
                             <Button style={{ background: '#39b0e5', border: 'none', margin: '0 auto', width: '100%' }} type="submit">
-                                Gửi
+                                Quên mật khẩu
                             </Button>
                         </Form.Group>
                     </Form>
