@@ -22,13 +22,22 @@ const RegisterClient = () => {
         validationSchema: Yup.object({
             username: Yup.string()
                 .min(2, "Tên đăng nhập phải nhiều hơn 2 ký tự")
-                .max(15, "Tên đăng nhập không vượt quá 15 ký tự")
+                .max(20, "Tên đăng nhập không vượt quá 20 ký tự")
                 .required("Vui lòng cung cấp tên đăng nhập"),
             email: Yup.string()
                 .email("Định dạng email chưa chính xác")
                 .required("*Vui lòng cung cấp email"),
             password: Yup.string()
                 .min(8, "Mật khẩu phải có ít nhất 8 ký tự")
+                .max(12, "Mật khẩu không vượt quá 12 ký tự")
+                .matches(
+                    /^(?=.*[a-z])/, "Mật khẩu phải có ít nhất 1 ký tự viết thường")
+                .matches(
+                    /^(?=.*[A-Z])/, "Mật khẩu phải có ít nhất 1 ký tự viết hoa")
+                .matches(
+                    /^(?=.*[0-9])/, "Mật khẩu phải có ít nhất 1 ký tự số")
+                .matches(
+                    /^(?=.*[!@#\$%\^&\*])/, "Mật khẩu phải có ít nhất 1 ký tự đặc biệt [!@#\$%\^&\*]")
                 .required("*Vui lòng cung cấp mật khẩu")
         }),
         onSubmit: values => {
