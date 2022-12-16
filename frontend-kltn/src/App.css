@@ -7,6 +7,10 @@
 button:focus {
   box-shadow: none !important;
 }
+input:focus {
+  border: none;
+  box-shadow: none !important;
+}
 
 /* Loader */
 .lds-ellipsis {
@@ -85,6 +89,30 @@ button:focus {
   color: #39b0e5;
 }
 
+/* input-group-search-dropdown */
+.input-group button {
+  color: #333333;
+  border: 1px solid #bbbbbb;
+  background-color: white;
+}
+
+.input-group button:hover {
+  color: #333333;
+  border: 1px solid #bbbbbb;
+  background-color: white;
+}
+
+.input-group button:active {
+  color: #333333;
+  border: 1px solid #bbbbbb;
+  background-color: white;
+}
+
+.input-group button:focus {
+  color: #333333;
+  border: 1px solid #bbbbbb;
+  background-color: white;
+}
 
 
 /* Responsive Appear */

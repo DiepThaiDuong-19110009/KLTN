@@ -20,16 +20,16 @@ const NavbarClient = () => {
                     </Button>
                     <Collapse in={open}>
                         <ListGroup style={{ position: 'absolute', width: '250px', borderRadius: '0px' }}>
-                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
                                 <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
                             </ListGroup.Item>
-                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
                                 <i className="fas fa-long-arrow-alt-right me-3"></i>Áo thun
                             </ListGroup.Item>
-                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
                                 <i className="fas fa-long-arrow-alt-right me-3"></i>Giày thể thao
                             </ListGroup.Item>
-                            <ListGroup.Item className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
                                 <i className="fas fa-long-arrow-alt-right me-3"></i>Quần tây
                             </ListGroup.Item>
                         </ListGroup>
