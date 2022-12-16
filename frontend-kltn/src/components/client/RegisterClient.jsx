@@ -22,7 +22,7 @@ const RegisterClient = () => {
         validationSchema: Yup.object({
             username: Yup.string()
                 .min(2, "Tên đăng nhập phải nhiều hơn 2 ký tự")
-                .max(20, "Tên đăng nhập không vượt quá 20 ký tự")
+                .max(15, "Tên đăng nhập không vượt quá 15 ký tự")
                 .required("Vui lòng cung cấp tên đăng nhập"),
             email: Yup.string()
                 .email("Định dạng email chưa chính xác")

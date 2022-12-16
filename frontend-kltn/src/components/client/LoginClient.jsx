@@ -64,7 +64,7 @@ const LoginClient = () => {
                         </Form.Group>
                         <Form.Group className="mb-3 d-flex justify-content-between" controlId="formBasicCheckbox">
                             <Form.Check type="checkbox" label="Hiển thị mật khẩu" onClick={togglePasswordVisiblity}/>
-                            <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/'>Quên mật khẩu?</Link>
+                            <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/forgotpassword'>Quên mật khẩu?</Link>
                         </Form.Group>
                         <Form.Group className='d-flex justify-content-center'>
                             <Button style={{ background: '#39b0e5', border: 'none', margin: '0 auto', width: '100%' }} type="submit">
