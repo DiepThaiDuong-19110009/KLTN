@@ -35,10 +35,7 @@ const LoginClient = () => {
         <Row style={{ width: '100vw', height: '100vh', backgroundImage: 'linear-gradient(#39b0e5, #3aabd9, #b5dbe8)' }} className='mx-0 p-2 d-flex justify-content-center align-items-center'>
             <Col className='px-5 py-4 d-flex flex-column justify-content-between align-items-center' style={{ height: '90vh', background: '#f3f3f3', borderRadius: '10px' }} sm={10} md={8} lg={4} xl={4}>
                 <div className='d-flex flex-column justify-content-between align-items-center' style={{ width: '100%' }}>
-                    <Link to='/'>
-                        <Image style={{ height: '50px', width: '50px' }} src='https://res.cloudinary.com/dkzuyi8fq/image/upload/v1670986236/samples/KLTN/logo-Xstore_yqzhts.png' alt='logo'></Image>
-                    </Link>
-                    <h5 className='pt-4'>Đăng nhập</h5>
+                    <h4 className='py-2'>Đăng nhập</h4>
                     <Form onSubmit={formik.handleSubmit} style={{ width: '100%' }}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email</Form.Label>
