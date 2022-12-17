@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/esm/Container'
 const NavbarClient = () => {
     const [open, setOpen] = useState(false);
     return (
-        <Navbar style={{ borderBottom: 'solid 1px #dddddd' }} expand="lg" className='py-0'>
+        <Navbar style={{ borderBottom: 'solid 1px #dddddd', zIndex:'2' }} expand="lg" className='py-0'>
             <Container>
                 <Navbar.Brand className='my-0 py-0' style={{textTransform: 'uppercase'}}>
                     <Button
@@ -19,18 +19,30 @@ const NavbarClient = () => {
                         <i style={{ marginLeft: '15px' }} className="fas fa-caret-down"></i>
                     </Button>
                     <Collapse in={open}>
-                        <ListGroup style={{ position: 'absolute', width: '250px', borderRadius: '0px' }}>
-                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
+                        <ListGroup style={{ position: 'absolute', zIndex:'1', width: '250px', borderRadius: '0px' }}>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
                                 <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
                             </ListGroup.Item>
-                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
-                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo thun
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
                             </ListGroup.Item>
-                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
-                                <i className="fas fa-long-arrow-alt-right me-3"></i>Giày thể thao
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
                             </ListGroup.Item>
-                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category' style={{ fontSize: '15px', cursor: 'pointer ' }}>
-                                <i className="fas fa-long-arrow-alt-right me-3"></i>Quần tây
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
+                            </ListGroup.Item>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
+                            </ListGroup.Item>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
+                            </ListGroup.Item>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
+                            </ListGroup.Item>
+                            <ListGroup.Item onClick={() => setOpen(!open)} className='choose-item-category d-flex align-items-center' style={{height: '50px', fontSize: '15px', cursor: 'pointer ' }}>
+                                <i className="fas fa-long-arrow-alt-right me-3"></i>Áo sơ mi
                             </ListGroup.Item>
                         </ListGroup>
                     </Collapse>

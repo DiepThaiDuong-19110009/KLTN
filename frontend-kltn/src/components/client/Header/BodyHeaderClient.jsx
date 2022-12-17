@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import SearchClient from '../SearchClient'
 
 const BodyHeaderClient = () => {
+    // Scroll page
+    const [sticky, setSticky] = useState("");
+
+    useEffect(() => {
+        window.addEventListener("scroll", isSticky);
+        return () => {
+            window.removeEventListener("scroll", isSticky);
+        };
+    }, []);
+
+    const isSticky = () => {
+        const scrollTop = window.scrollY;
+        const stickyClass = scrollTop >= 50 ? "is-sticky" : "";
+        setSticky(stickyClass);
+    };
+    const classes = `header-section ${sticky}`;
+
     return (
-        <div style={{ borderBottom: 'solid 1px #dddddd' }}>
+        <div style={{ borderBottom: 'solid 1px #dddddd' }} className={classes}>
             <Container style={{ color: '#ffffff', fontSize: '13px' }}>
                 <Row className='mx-0 d-flex justify-content-between align-items-center' style={{ color: '#212529' }}>
                     <Col style={{ width: 'auto' }} className='px-0 py-3 d-flex align-items-center' xl={3}>
