@@ -26,6 +26,7 @@ const ForgotPasswordClient = () => {
             <Col className='px-5 py-4 d-flex flex-column justify-content-between align-items-center' style={{ height: 'auto', background: '#f3f3f3', borderRadius: '10px' }} sm={10} md={8} lg={4} xl={4}>
                 <div className='d-flex flex-column justify-content-between align-items-center mb-5' style={{ width: '100%' }}>
                     <h4 className='py-2'>Quên mật khẩu</h4>
+                    <p>Vui lòng nhập email bạn muốn lấy lại mật khẩu</p>
                     <Form onSubmit={formik.handleSubmit} style={{ width: '100%' }}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Email</Form.Label>
@@ -36,7 +37,7 @@ const ForgotPasswordClient = () => {
                                 value={formik.values.email}
                                 onChange={formik.handleChange} />
                             {formik.errors.email && formik.touched.email && (
-                                <p style={{ color: 'red' }}>{formik.errors.email}</p>
+                                <p className='mb-0' style={{ color: 'red', fontSize: '14px' }}>{formik.errors.email}</p>
                             )}
                         </Form.Group>
                         <Form.Group className='d-flex justify-content-center'>
