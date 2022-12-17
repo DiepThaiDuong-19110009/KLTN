@@ -20,10 +20,10 @@ const LoginClient = () => {
 
         validationSchema: Yup.object({
             email: Yup.string()
-                .email("Định dạng email chưa chính xác")
+                .email("*Định dạng email chưa chính xác")
                 .required("*Vui lòng cung cấp email"),
             password: Yup.string()
-                .min(8, "Mật khẩu phải có ít nhất 8 ký tự")
+                .min(8, "*Mật khẩu phải có ít nhất 8 ký tự")
                 .required("*Vui lòng cung cấp mật khẩu")
         }),
         onSubmit: values => {
@@ -46,7 +46,7 @@ const LoginClient = () => {
                                 value={formik.values.email}
                                 onChange={formik.handleChange} />
                             {formik.errors.email && formik.touched.email && (
-                                <p style={{ color: 'red' }}>{formik.errors.email}</p>
+                                <p className='mb-0' style={{ color: 'red', fontSize: '14px' }}>{formik.errors.email}</p>
                             )}
                         </Form.Group>
 
@@ -59,11 +59,11 @@ const LoginClient = () => {
                                 value={formik.values.password}
                                 onChange={formik.handleChange} />
                             {formik.errors.password && formik.touched.password && (
-                                <p style={{ color: 'red' }}>{formik.errors.password}</p>
+                                <p className='mb-0' style={{ color: 'red', fontSize: '14px' }}>{formik.errors.password}</p>
                             )}
                         </Form.Group>
                         <Form.Group className="mb-3 d-flex justify-content-between" controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="Hiển thị mật khẩu" onClick={togglePasswordVisiblity}/>
+                            <Form.Check type="checkbox" label="Hiển thị mật khẩu" onClick={togglePasswordVisiblity} />
                             <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/forgotpassword'>Quên mật khẩu?</Link>
                         </Form.Group>
                         <Form.Group className='d-flex justify-content-center'>
@@ -88,6 +88,9 @@ const LoginClient = () => {
                     <p>Bạn chưa có tài khoản?
                         <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/register'> Đăng ký</Link>
                     </p>
+                </div>
+                <div>
+                    <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/'>Quay về trang chủ</Link>
                 </div>
             </Col>
         </Row>
