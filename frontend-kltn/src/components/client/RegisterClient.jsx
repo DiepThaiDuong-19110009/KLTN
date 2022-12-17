@@ -116,7 +116,7 @@ const RegisterClient = () => {
                     </p>
                 </div>
                 <div>
-                    <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/login'>Quay về trang chủ</Link>
+                    <Link style={{ textDecoration: 'none', color: '#39b0e5' }} to='/'>Quay về trang chủ</Link>
                 </div>
             </Col>
         </Row>
