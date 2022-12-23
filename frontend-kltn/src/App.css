@@ -12,6 +12,11 @@ input:focus {
   box-shadow: none !important;
 }
 
+/* Select form */
+#search-select .form-control {
+  width: 50% !important;
+}
+
 /* Loader */
 .lds-ellipsis {
   position: relative;
@@ -154,3 +159,5 @@ input:focus {
     display: none;
   }
 }
+
+

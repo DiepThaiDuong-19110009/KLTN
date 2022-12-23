@@ -1,10 +1,10 @@
 import React from 'react'
-import ForgotPasswordClient from '../../components/client/ForgotPasswordClient'
+import ForgotPassword from '../components/ForgotPassword/ForgotPassword'
 
 const ForgotPasswordPage = () => {
     return (
         <>
-            <ForgotPasswordClient />
+            <ForgotPassword />
         </>
     )
 }

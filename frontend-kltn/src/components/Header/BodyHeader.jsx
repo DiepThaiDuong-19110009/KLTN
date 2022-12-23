@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import SearchClient from '../SearchClient'
+import SearchClient from '../Search'
 
-const BodyHeaderClient = () => {
+const BodyHeader = () => {
     // Scroll page
     const [sticky, setSticky] = useState("");
 
@@ -66,4 +66,4 @@ const BodyHeaderClient = () => {
     )
 }
 
-export default BodyHeaderClient
+export default BodyHeader

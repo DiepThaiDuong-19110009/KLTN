@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useFormik } from "formik"
 import * as Yup from "yup";
 
-const ForgotPasswordClient = () => {
+const ForgotPassword = () => {
     // Check validation form
     const formik = useFormik({
         initialValues: {
@@ -55,4 +55,4 @@ const ForgotPasswordClient = () => {
     );
 }
 
-export default ForgotPasswordClient
+export default ForgotPassword

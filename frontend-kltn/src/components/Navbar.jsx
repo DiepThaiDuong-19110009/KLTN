@@ -2,8 +2,9 @@ import React, { useState } from 'react'
 import { Button, Collapse, ListGroup, Nav, Navbar } from 'react-bootstrap'
 import Container from 'react-bootstrap/esm/Container'
 
-const NavbarClient = () => {
+const NavBar = () => {
     const [open, setOpen] = useState(false);
+
     return (
         <Navbar style={{ borderBottom: 'solid 1px #dddddd', zIndex:'2' }} expand="lg" className='py-0'>
             <Container>
@@ -73,4 +74,4 @@ const NavbarClient = () => {
     )
 }
 
-export default NavbarClient
+export default NavBar
